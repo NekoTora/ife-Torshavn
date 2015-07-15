@@ -108,11 +108,16 @@ window.onload = function() {
 
   for (var i = nav.length - 1; i >= 0; i--) {
     nav[i].onclick = function() {
-      if (ing) return;
+      if (ing === true) return;
 
+      ing = true;
       document.querySelector('#nav li.active').className = '';
       document.querySelector('body').className = 'loaded on' + this.getAttribute('data-to');
-      this.parentNode.className = 'active';
+      document.querySelector('#nav a[data-to=' + this.getAttribute('data-to') + ']').parentNode.className = 'active';
+      
+      setTimeout(function() {
+        ing = false;
+      }, 700);
     }
   };
 }
