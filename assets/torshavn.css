@@ -26,6 +26,15 @@ body {
   background: transparent;
 }
 
+#nav li {
+  padding: 0;
+}
+
+#nav a {
+  padding: 0 1.5em;
+  display: block;
+}
+
 body > section {
   position: relative;
   opacity: 0;
@@ -72,6 +81,7 @@ body > section {
   cursor: pointer;
   font-weight: 400;
   position: relative;
+  display: inline-block;
   text-shadow: 0 2px 8px rgba(0, 0, 0, .4);
 
   -webkit-transition: .6s;
