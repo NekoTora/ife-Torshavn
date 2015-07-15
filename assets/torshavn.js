@@ -92,7 +92,7 @@ var fisrtCanvasInit = function() {
 
 window.onresize = fisrtCanvasInit;
 
-window.onclick = function (event) {
+document.querySelector('#first').onclick = function (event) {
     var x = event.clientX,
         y = event.clientY;
     cleanUpArray();
