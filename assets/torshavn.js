@@ -117,7 +117,7 @@ window.onload = function() {
       
       setTimeout(function() {
         ing = false;
-      }, 700);
+      }, 400);
     }
   };
 }
