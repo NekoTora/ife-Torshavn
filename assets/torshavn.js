@@ -12,9 +12,9 @@ window.requestAnimFrame = (function () {
 
 // Configuration, Play with these
 var config = {
-    particleNumber: 400,
-    maxParticleSize: 10,
-    maxSpeed: 80
+  particleNumber: 0,
+  maxParticleSize: 10,
+  maxSpeed: 80
 };
 
 // Some Variables hanging out
@@ -33,10 +33,10 @@ var Particle = function Particle(x, y) {
 Particle.prototype.Color = function() {
   var r, g, b, a, variation;
 
-  r = Math.floor(Math.random() * 60);
-  g = 255 - (Math.floor(Math.random() * 80));
-  b = 255 - Math.floor(Math.random() * 20);
-  a = Math.random() + .4;
+  r = 255 - Math.floor(Math.random() * 30);
+  g = 255 - (Math.floor(Math.random() * 160));
+  b = Math.floor(Math.random() * 30);
+  a = Math.random();
 
   return "rgba(" + r + "," + g + "," + b + "," + a + ")";
 };
@@ -83,6 +83,7 @@ var frame = function frame() {
 var fisrtCanvasInit = function() {
   canvas.width = document.body.clientWidth;
   canvas.height = document.body.clientHeight;
+  config.particleNumber = (document.body.clientHeight > 600 ? document.body.clientHeight - 100 : document.body.clientHeight);
 
   initParticles(config.particleNumber);
 
@@ -98,4 +99,7 @@ window.onclick = function (event) {
     initParticles(config.particleNumber, x, y);
 };
 
-fisrtCanvasInit();
+
+window.onload = function() {
+  fisrtCanvasInit();
+}
