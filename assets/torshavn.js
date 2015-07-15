@@ -99,7 +99,20 @@ window.onclick = function (event) {
     initParticles(config.particleNumber, x, y);
 };
 
-
 window.onload = function() {
+  document.querySelector('body').className = 'loaded onfirst';
   fisrtCanvasInit();
+
+  var ing = false,
+      nav = document.querySelectorAll('*[data-to]');
+
+  for (var i = nav.length - 1; i >= 0; i--) {
+    nav[i].onclick = function() {
+      if (ing) return;
+
+      document.querySelector('#nav li.active').className = '';
+      document.querySelector('body').className = 'loaded on' + this.getAttribute('data-to');
+      this.parentNode.className = 'active';
+    }
+  };
 }

@@ -6,12 +6,34 @@
   <link rel="stylesheet" type="text/css" href="./assets/torshavn.css">
 </head>
 <body>
+  <nav id="nav" class="fixed">
+    <div class="container">
+      <ul class="nav-group right">
+        <li class="active"><a href="javascript:;" data-to="first">Home</a></li>
+        <li><a href="javascript:;" data-to="second">About</a></li>
+        <li><a href="javascript:;" data-to="third">Members</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <section id="first">
     <div class="container">
-      <h1>Tórshavn</h1>
+      <h1 data-to="second">Tórshavn</h1>
       <canvas id="first-canvas"></canvas>
     </div>
     <div class="background"></div>
+  </section>
+
+  <section id="second">
+    <div class="container">
+      <h2>Who're we?</h2>
+      <p>What?</p>
+    </div>
+  </section>
+
+  <section id="third">
+    <div class="container">
+    </div>
   </section>
   <script type="text/javascript" src="./assets/torshavn.js"></script>
 </body>
