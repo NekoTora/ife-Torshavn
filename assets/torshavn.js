@@ -33,10 +33,10 @@ var Particle = function Particle(x, y) {
 Particle.prototype.Color = function() {
   var r, g, b, a, variation;
 
-  r = 255 - (Math.floor(Math.random() * 180));
-  g = 255 - (Math.floor(Math.random() * 90));
-  b = 255 - (Math.floor(Math.random() * 10));
-  a = Math.random() + 0.2;
+  r = Math.floor(Math.random() * 60);
+  g = 255 - (Math.floor(Math.random() * 80));
+  b = 255 - Math.floor(Math.random() * 20);
+  a = Math.random() + .4;
 
   return "rgba(" + r + "," + g + "," + b + "," + a + ")";
 };
