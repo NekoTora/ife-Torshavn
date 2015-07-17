@@ -205,7 +205,8 @@ body > section
     background-color: rgba(255, 255, 255, .5);
 }
 
-.article-after {
+.article-after
+{
     margin-top: .3em;
 }
 
@@ -234,4 +235,64 @@ body > section
 {
     border-top-color: transparent;
     border-bottom-color: rgba(255, 255, 255, .5);
+}
+
+
+#third
+{
+    display: table;
+
+    padding: 0 15%;
+}
+
+#third .container
+{
+    display: table-cell;
+
+    width: 100%;
+    max-width: inherit;
+    height: 100%;
+
+    vertical-align: middle;
+}
+
+#third article
+{
+    display: block;
+    float: left;
+
+    width: 33.3333%;
+    height: 14em;
+    padding: 1em 0;
+
+    -webkit-transition: .3s;
+            transition: .3s;
+    text-align: center;
+}
+
+#third article:hover
+{
+    background: #3fb9dd;
+}
+
+.t-avatar
+{
+    width: 125px;
+
+    border-radius: 50%;
+}
+
+.t-name
+{
+    display: block;
+}
+
+.t-descripition
+{
+    color: #999;
+}
+
+#third article:hover .t-descripition
+{
+    color: #fff;
 }
