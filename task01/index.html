@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- Build -->
+    <title>IFE</title>
+    <link rel="stylesheet" type="text/css" href="./source/base.css">
+    <script src="./source/echarts.js"></script>
+</head>
+<body> 
+<div class="header">
+    <div class="inner">
+        <h1>Tórshavn</h1>
+        <h2>Baidu IFE</h2>
+    </div>
+</div>
+<div class="main">
+    <div class="row">
+        <div class="box">
+            <div class="title">
+                <h2>中国主要城市空气质量地图图表</h2>
+            </div>
+            <canvas id="map"></canvas>
+        </div>
+    </div>
+    <div class="row clear">
+        <div class="left">
+            <div class="box">
+                <div class="title opition">
+                    <h2 class="on">环形图</h2>
+                    <h2>饼状图</h2>
+                </div>
+                <canvas id="map"></canvas>
+            </div>
+        </div>
+        <div class="right">
+            <div class="box">
+                <div class="title opition">
+                    <h2 class="on">折线图</h2>
+                    <h2>统计图</h2>
+                </div>
+                <canvas id="map"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: './source/chart'
+        }
+    });
+    require(
+        [
+            'echarts',
+            'echarts/chart/line',   // 按需加载所需图表，如需动态类型切换功能，别忘了同时加载相应图表
+            'echarts/chart/bar'
+        ],
+        function (ec) {
+            var myChart = ec.init(document.getElementById('main'));
+            var option = {
+                ...
+            }
+            myChart.setOption(option);
+        }
+    );
+</script>
+</body>
+</html>

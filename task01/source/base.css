@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* by Mooshroom */
+
+
+/* Common */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #efefef;
+	color: #666;
+	font-size: 15px;
+	font-family: Ubuntu, "Helvetica Neue", Helvetica, "Nimbus Sans L", "Open Sans", "Roboto", "Segoe WP", "Segoe UI", arial, "Liberation Sans", freesans, clean, "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans CJK TC", "Source Han Sans TW", "Noto Sans CJK JP", "Source Han Sans JP", "Noto Sans CJK", "Source Han Sans", "Microsoft YaHei UI", "Microsoft YaHei", DengXian, "Wenquanyi Micro Hei", "ST Heiti", "Droid Sans Fallback", "Microsoft JhengHei", SimSun, sans-serif;
+}
+
+::selection{
+	background:rgba(0,0,0,.2);
+}
+
+a,a:hover,a:link,a:visited{
+	color: #555;
+	text-decoration: none;
+}
+
+.clear:after{
+	content:"";
+	display:block;
+	height:0;
+	visibility:hidden;
+	clear:both;
+}
+
+.header{
+	background: #65BCD8;
+	box-shadow: 0 3px 6px rgba(0,0,0,.08);
+}
+
+.header .inner{
+	width: 960px;
+	height: 160px;
+	padding: 0 20px;
+	margin: 0 auto;
+	color: #fff;
+}
+
+.header h1{
+	font-size: 50px;
+	padding-top: 28px;
+}
+
+
+
+.main{
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+.row{
+	padding-bottom: 35px;
+}
+
+.row .left{
+	float: left;
+	width: 36%;
+}
+
+.row .right{
+	float: right;
+	width: 60%;
+}
+
+.box{
+	padding: 25px;
+	padding-top: 15px;
+	background: #fff;
+	box-shadow: 0 3px 6px rgba(0,0,0,.08);
+}
+
+.box .title{
+	border-left: 5px solid #66ccff;
+	margin-left: -25px;
+	padding-left: 20px;
+	margin-bottom: 20px;
+}
+
+.box .title h2{
+	display: inline-block;
+	font-weight: normal;
+	font-size: 18px;
+	padding-left: 1em;
+}
+
+.box .title h2:first-child{
+	padding-left: 0;
+}
+
+.box .title h2.on{
+	color: #000;
+}
+
+.box .opition h2{
+	color: #888;
+}
+
+canvas{
+	background: #eee;
+}
