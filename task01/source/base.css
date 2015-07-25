@@ -84,27 +84,61 @@ a,a:hover,a:link,a:visited{
 	margin-left: -25px;
 	padding-left: 20px;
 	margin-bottom: 20px;
+	height: 24px;
 }
 
 .box .title h2{
 	display: inline-block;
 	font-weight: normal;
 	font-size: 18px;
-	padding-left: 1em;
 }
 
-.box .title h2:first-child{
+.box .opition a{
+	display: inline-block;
+	color: #888;
+	font-size: 15px;
+	padding-left: 1em;
+	transition: all .3s ease;
+}
+
+.box .opition a:first-child{
 	padding-left: 0;
 }
 
-.box .title h2.on{
+.box .opition a.on{
 	color: #000;
+	font-size: 18px;
 }
 
-.box .opition h2{
-	color: #888;
+.chart p:after{
+	display: block;
+	content: "(｡・`ω´･)加载中...嘿咻嘿咻！";
+	line-height: 200px;
+	height: 200px;
+	text-align: center;
+	width: 100%;
+	font-size: 15px;
+	color: #bbb;
 }
 
-canvas{
-	background: #eee;
+.footer{
+	width: 1000px;
+	margin: 0 auto;
+	padding: 20px 0 40px 0;
+	margin-top: 20px;
+	border-top: 1px solid #bbb;
+}
+
+.footer a{
+	display: block;
+	line-height: 2em;
+	color: #898;
+}
+
+.footer p.a{
+	font-size: 13px;
+}
+
+.footer a:hover{
+	text-decoration: underline;
 }

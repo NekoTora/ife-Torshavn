@@ -7,7 +7,6 @@
     <!-- Build -->
     <title>IFE</title>
     <link rel="stylesheet" type="text/css" href="./source/base.css">
-    <script src="./source/echarts.js"></script>
 </head>
 <body> 
 <div class="header">
@@ -22,51 +21,58 @@
             <div class="title">
                 <h2>中国主要城市空气质量地图图表</h2>
             </div>
-            <canvas id="map"></canvas>
+            <div class="chart" id="map" style="width:100%;height:500px">
+                <p class="loading"></p>
+            </div>
         </div>
     </div>
     <div class="row clear">
         <div class="left">
-            <div class="box">
+            <div class="box" id="box1">
                 <div class="title opition">
-                    <h2 class="on">环形图</h2>
-                    <h2>饼状图</h2>
+                    <a class="on" href="javascript:void(0);" chart="pie1">环形图</a>
+                    <a href="javascript:void(0);" chart="pie2">饼状图</a>
                 </div>
-                <canvas id="map"></canvas>
+                <div class="chartbox">
+                    <div class="chart" id="pie1" style="width:310px;height:200px">
+                        <p class="loading"></p>
+                    </div>
+                    <div class="chart" id="pie2" style="width:310px;height:200px;display:none;">
+                        <p class="loading"></p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="right">
-            <div class="box">
+            <div class="box" id="box2">
                 <div class="title opition">
-                    <h2 class="on">折线图</h2>
-                    <h2>统计图</h2>
+                    <a class="on" href="javascript:void(0);" chart="line">折线图</a>
+                    <a href="javascript:void(0);" chart="bar">统计图</a>
                 </div>
-                <canvas id="map"></canvas>
+                <div class="chartbox">
+                    <div class="chart" id="line" style="width:550px;height:200px">
+                        <p class="loading"></p>
+                    </div>
+                    <div class="chart" id="bar" style="width:550px;height:200px;display:none;">
+                        <p class="loading"></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="footer">
+        <a href="http://flag.moe/">Designed by 哞菇. 2015-07</a>
+        <a href="https://lingoys.com/" class="s">© 2015 Lingoys!Art.</a>
+    </div>
 </div>
-<script type="text/javascript">
-    // 路径配置
-    require.config({
-        paths: {
-            echarts: './source/chart'
-        }
-    });
-    require(
-        [
-            'echarts',
-            'echarts/chart/line',   // 按需加载所需图表，如需动态类型切换功能，别忘了同时加载相应图表
-            'echarts/chart/bar'
-        ],
-        function (ec) {
-            var myChart = ec.init(document.getElementById('main'));
-            var option = {
-                ...
-            }
-            myChart.setOption(option);
-        }
-    );
-</script>
+<script src="./source/jquery-1.9.1.min.js"></script>
+<script src="./source/page.js"></script>
+<script src="./source/echarts.js"></script>
+<script src="./source/config.js"></script>
+<script src="./source/data_map.js"></script>
+<script src="./source/data_pie1.js"></script>
+<script src="./source/data_pie2.js"></script>
+<script src="./source/data_line.js"></script>
+<script src="./source/data_bar.js"></script>
 </body>
 </html>
