@@ -2,10 +2,10 @@
 require(
     [
         'echarts',
-        'echarts/chart/pie' // 使用饼图就加载pie模块，按需加载
+        'echarts/chart/pie' 
     ],
     function (ec) {
-        // 基于准备好的dom，初始化echarts图表
+
         var myChart = ec.init(document.getElementById('pie1'));                                 
         
         var labelTop = {
@@ -65,7 +65,7 @@ require(
                     type : 'pie',
                     center : ['25%', '40%'],
                     radius : radius,
-                    x: '0%', // for funnel
+                    x: '0%', 
                     itemStyle : labelFromatter,
                     data : [
                         {name:'other', value:46, itemStyle : labelBottom},
@@ -76,7 +76,7 @@ require(
                     type : 'pie',
                     center : ['75%', '40%'],
                     radius : radius,
-                    x:'20%', // for funnel
+                    x:'20%',
                     itemStyle : labelFromatter,
                     data : [
                         {name:'other', value:54, itemStyle : labelBottom},

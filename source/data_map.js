@@ -7,12 +7,6 @@
         function (ec) {
             var myChart = ec.init(document.getElementById('map'));
             var option = {
-    title : {
-        text: '全国主要城市空气质量（pm2.5）',
-        subtext: 'data from PM25.in',
-        sublink: 'http://www.pm25.in',
-        x:'center'
-    },
     tooltip : {
         trigger: 'item'
     },
@@ -26,18 +20,6 @@
         max : 500,
         calculable : true,
         color: ['maroon','purple','red','orange','yellow','lightgreen']
-    },
-    toolbox: {
-        show : true,
-        orient : 'vertical',
-        x: 'right',
-        y: 'center',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
     },
     series : [
         {

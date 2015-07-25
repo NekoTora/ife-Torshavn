@@ -19,7 +19,6 @@ require(
                 y : 'bottom',
                 data:['AQI>300','200<AQI<300','AQI<200']
             },
-            calculable : true,
             series : [
                 {
                     name:'AQI',

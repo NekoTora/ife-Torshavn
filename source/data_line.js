@@ -2,10 +2,10 @@
 require(
     [
         'echarts',
-        'echarts/chart/line' // 使用折线图就加载line模块，按需加载
+        'echarts/chart/line'
     ],
     function (ec) {
-        // 基于准备好的dom，初始化echarts图表
+
         var myChart = ec.init(document.getElementById('line'));                                 
         
         option = {
@@ -13,10 +13,9 @@ require(
             tooltip : {
                 trigger: 'axis'
             },
-            calculable : true,
             xAxis : [
                 {
-                    name : "月(时间)",
+                    name : "月",
                     type : 'category',
                     boundaryGap : false,
                     data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
@@ -24,7 +23,7 @@ require(
             ],
             yAxis : [
                 {
-                    name : "AQI(空气质量)",
+                    name : "AQI",
                     splitNumber : 3,
                     type : 'value',
                     axisLabel : {
@@ -39,17 +38,12 @@ require(
                     data:[100, 154, 139, 89, 162, 130, 150, 190, 230, 210, 190,178],
                     itemStyle : {
                          normal: {
-                            color : 'rgb(8,93,56)'
+                            color : 'rgb(47,166,214)'
                         },
                         emphasis: {
-                            color : 'rgb(8,93,56)'
+                            color : 'rgb(59,95,165)'
                         }
                     },
-                    markLine : {
-                        data : [
-                            {type : 'average', name: '平均值'}
-                        ]
-                    }
                 }
             ]
         };

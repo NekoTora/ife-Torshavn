@@ -10,20 +10,17 @@ require(
         
         option = {
             backgroundColor : 'rgb(255,255,255)',
-            tooltip : {
-                trigger: 'axis'
-            },
-            calculable : true,
+            tooltip: { show: true },
             xAxis : [
                 {
-                    name : "月(时间)",
+                    name : "月",
                     type : 'category',
                     data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
                 }
             ],
             yAxis : [
                 {
-                    name : "AQI(空气质量)",
+                    name : "AQI",
                     splitNumber : 3,
                     type : 'value'
                 }
@@ -36,24 +33,12 @@ require(
                     data:[100, 154, 139, 89, 162, 130, 150, 190, 230, 210, 190,178],
                     itemStyle : {
                          normal: {
-                            color : 'rgb(64,159,232)',
-                            barBorderRadius : 5
+                            color : 'rgb(64,159,232)'
                         },
                         emphasis: {
-                            color : 'rgb(64,159,232)',
-                            barBorderRadius : 5
+                            color : 'rgb(64,159,232)'
                         }
                     },
-                    // lineStyle : {
-                    //     color: ['#ccc'],
-                    //     width: 1,
-                    //     type: 'dotted'
-                    // },
-                    markLine : {
-                        data : [
-                            {type : 'average', name : '平均值'}
-                        ]
-                    }
                 }
             ]
         };
